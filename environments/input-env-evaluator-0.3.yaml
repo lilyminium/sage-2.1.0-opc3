@@ -1,0 +1,43 @@
+name: evaluator-0.3
+channels:
+  - simonboothroyd
+  - conda-forge
+  - openeye
+dependencies:
+  # base python
+  - python =3.9.18
+  - pip
+
+  # chemistry
+  - openmm ==7.7.0
+  - openmmtools ==0.21.5
+  - openff-evaluator <0.4
+  - openff-toolkit <0.11
+  - openeye-toolkits
+  - nonbonded
+  - geometric
+  - cachetools
+  - qcportal
+  - qcelemental
+  - torsiondrive
+  - rdkit
+  
+  # distributed
+  - distributed ==2.30.1
+
+  # general
+  - ipykernel
+  - seaborn
+  - mdanalysis
+  - tqdm
+  - click
+  - pyarrow
+  - rich
+
+
+  # compatibility
+  - cython <3
+  pip:
+    - click-option-group
+    - git+https://github.com/lilyminium/mdtraj.git@v1.9.8-fix-integer
+  

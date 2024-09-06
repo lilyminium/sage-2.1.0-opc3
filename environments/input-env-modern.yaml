@@ -1,0 +1,33 @@
+name: sage-2.1.0-opc3
+channels:
+  - conda-forge
+  - openeye
+dependencies:
+  # base python
+  - python
+  - pip
+
+  # chemistry
+  - openmm
+  - openmmtools
+  - openff-evaluator
+  - openeye-toolkits
+  - geometric
+  - cachetools
+  - qcportal
+  - qcelemental
+  - torsiondrive
+  - rdkit
+
+  # general
+  - ipykernel
+  - seaborn
+  - mdanalysis
+  - tqdm
+  - click
+  - pyarrow
+  - rich
+
+  - pip:
+    - click-option-group
+    - git+https://github.com/openforcefield/yammbs.git@0a94095  # main as of 2024-09-06
