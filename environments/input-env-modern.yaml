@@ -10,8 +10,8 @@ dependencies:
   # chemistry
   - openmm
   - openmmtools
-  - openff-evaluator
-  - openeye-toolkits
+  - openff-evaluator >=0.4.0
+  - openeye-toolkits >0.14.0
   - geometric
   - cachetools
   - qcportal
