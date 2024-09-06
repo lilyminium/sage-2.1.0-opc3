@@ -23,7 +23,7 @@ def main(
     output_file: str = "targets/phys-prop/options.json",
 ):
     options_file = Evaluator_SMIRNOFF.OptionsFile()
-    options_file.connection_options.server_address = "local_host"
+    options_file.connection_options.server_address = "localhost"
     options_file.connection_options.server_port = port
 
     # barebones options

@@ -11,7 +11,7 @@
 
 PORT=8002
 
-
+source ~/.bashrc
 conda activate sage-2.1.0-opc3
 
 # write force field

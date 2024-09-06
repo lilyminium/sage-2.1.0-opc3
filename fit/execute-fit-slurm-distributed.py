@@ -137,7 +137,8 @@ def _prepare_restart(
     help="The maximum number of workers to start running",
 )
 @optgroup.option(
-    "--queue-name",
+    "--queue",
+    "queue_name",
     type=str,
     default="free-gpu",
     help="The queue name to start the workers on",
@@ -219,7 +220,7 @@ def main(
     worker_resources = QueueWorkerResources(
         number_of_threads=n_threads,
         number_of_gpus=n_gpus,
-        preferred_gpu_toolkit=ComputeResources[gpu_toolkit],
+        preferred_gpu_toolkit=ComputeResources.GPUToolkit[gpu_toolkit],
         per_thread_memory_limit=memory_per_worker * unit.gigabyte,
         wallclock_time_limit=walltime,
     )
@@ -246,7 +247,7 @@ def main(
         )
         with server:
             with open(log_file, "w") as file:
-                subprocess.check_call(force_balance_arguments, sterr=file, stdout=file)
+                subprocess.check_call(force_balance_arguments, stderr=file, stdout=file)
 
 
 if __name__ == "__main__":
