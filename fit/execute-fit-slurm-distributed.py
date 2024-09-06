@@ -231,7 +231,8 @@ def main(
         queue_name=queue_name,
         setup_script_commands=[
             "source ~/.bashrc",
-            "conda activate " + conda_env
+            "conda activate " + conda_env,
+            "conda env export > conda-env.yaml",
         ],
         adaptive_interval="1000ms",
     )
