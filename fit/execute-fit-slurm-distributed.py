@@ -193,6 +193,12 @@ def rename_log_file(log_file):
     default="sage-2.1.0-opc",
     help="The conda environment to use",
 )
+@click.option(
+    "--extra-script-option",
+    type=str,
+    multiple=True,
+    help="Extra options to pass to the script",
+)
 def main(
     input_file: str = "optimize.in",
     log_file: str = "force_balance.log",
@@ -212,6 +218,8 @@ def main(
     walltime: str = "8:00",
     gpu_toolkit: typing.Literal["CUDA", "OpenCL"] = "CUDA",
     conda_env: str = "sage-2.1.0-opc",
+
+    extra_script_options: list[str] = []
 ):
     # prepare ForceBalance arguments
     force_balance_arguments = ["ForceBalance.py", input_file]
@@ -244,6 +252,7 @@ def main(
             "conda activate " + conda_env,
             "conda env export > conda-env.yaml",
         ],
+        extra_script_options=extra_script_options,
         adaptive_interval="1000ms",
     )
 

@@ -28,4 +28,5 @@ python execute-fit-slurm-distributed.py             \
     --memory-per-worker 8                           \
     --walltime          "24:00:00"                  \
     --queue             "free-gpu"                  \
-    --conda-env         "sage-2.1.0-opc3"
+    --conda-env         "sage-2.1.0-opc3"           \
+    --extra-script-option "--gres=gpu:1"              # note: this is HPC3 specific
