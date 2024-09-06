@@ -81,7 +81,16 @@ def _prepare_restart(
         print(f"Removing {target_directory}.")
 
 
-
+def rename_log_file(log_file):
+    """Rename the log file to have the correct extension"""
+    counter = 0
+    original_log_file = pathlib.Path(log_file)
+    log_file = pathlib.Path(log_file)
+    while log_file.exists():
+        counter += 1
+        log_file = pathlib.Path(f"{log_file.stem}_{counter}{log_file.suffix}")
+    original_log_file.rename(log_file)
+    print(f"Renamed existing {original_log_file} to {log_file}.")
 
 
 @click.command()
@@ -237,6 +246,8 @@ def main(
         ],
         adaptive_interval="1000ms",
     )
+
+    rename_log_file(log_file)
 
     with backend:
         server = EvaluatorServer(
