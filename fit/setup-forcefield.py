@@ -71,6 +71,29 @@ def main(
     # now add new water model
     forcefield.parse_sources([water_forcefield])
 
+    # add parameterization options
+    PARAMETERS_TO_OPTIMIZE = [
+        "[#16:1]",
+        "[#17:1]",
+        "[#1:1]-[#6X3]",
+        "[#1:1]-[#6X3](~[#7,#8,#9,#16,#17,#35])~[#7,#8,#9,#16,#17,#35]",
+        "[#1:1]-[#6X3]~[#7,#8,#9,#16,#17,#35]",
+        "[#1:1]-[#6X4]",
+        "[#1:1]-[#6X4]-[#7,#8,#9,#16,#17,#35]",
+        "[#1:1]-[#7]",
+        "[#1:1]-[#8]",
+        "[#35:1]",
+        "[#6:1]",
+        "[#6X4:1]",
+        "[#7:1]",
+        "[#8:1]",
+        "[#8X2H0+0:1]",
+        "[#8X2H1+0:1]",
+    ]
+    for smirks in PARAMETERS_TO_OPTIMIZE:
+        parameter = handler[smirks]
+        parameter.add_cosmetic_attribute("parameterize", "epsilon, rmin_half")
+
     # write out to file
     output_file = pathlib.Path(output_forcefield)
     output_file.parent.mkdir(parents=True, exist_ok=True)
