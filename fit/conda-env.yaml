@@ -234,6 +234,7 @@ dependencies:
   - opt_einsum=3.3.0=pyhc1e730c_2
   - orc=2.0.2=h669347b_0
   - packaging=24.1=pyhd8ed1ab_0
+  - packmol=20.15.1=hc8b2c43_1
   - pandas=1.5.3=py311h2872171_1
   - parmed=4.2.2=py311hb755f60_1
   - parso=0.8.4=pyhd8ed1ab_0

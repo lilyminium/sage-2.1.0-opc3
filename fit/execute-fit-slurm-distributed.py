@@ -86,6 +86,8 @@ def rename_log_file(log_file):
     counter = 0
     original_log_file = pathlib.Path(log_file)
     log_file = pathlib.Path(log_file)
+    if not log_file.exists():
+        return
     while log_file.exists():
         counter += 1
         log_file = pathlib.Path(f"{log_file.stem}_{counter}{log_file.suffix}")
@@ -195,6 +197,7 @@ def rename_log_file(log_file):
 )
 @click.option(
     "--extra-script-option",
+    "extra_script_options",
     type=str,
     multiple=True,
     help="Extra options to pass to the script",
