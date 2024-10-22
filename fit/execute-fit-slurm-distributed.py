@@ -77,8 +77,9 @@ def _prepare_restart(
                 break
     for subdir in incomplete_iteration_subdirs:
         target_directory = pathlib.Path("optimize.tmp") / target_name / subdir
-        shutil.rmtree(target_directory)
-        print(f"Removing {target_directory}.")
+        if target_directory.exists():
+            shutil.rmtree(target_directory)
+            print(f"Removing {target_directory}.")
 
 
 def rename_log_file(log_file):
@@ -131,7 +132,7 @@ def rename_log_file(log_file):
 @optgroup.option(
     "--continue-run",
     type=bool,
-    default=False,
+    default=True,
     help="Continue a previous run",
 )
 @optgroup.group("Distributed configuration")
@@ -209,7 +210,7 @@ def main(
     port: int = 8000,
     working_directory: str = "working-directory",
     enable_data_caching: bool = True,
-    continue_run: bool = False,
+    continue_run: bool = True,
 
     # distributed args
     n_min_workers: int = 1,
@@ -233,7 +234,8 @@ def main(
         _prepare_restart(input_file)
         force_balance_arguments = ["ForceBalance.py", "--continue", input_file]
     else:
-        _remove_previous_files()
+        # _remove_previous_files()
+        pass
 
 
     # actually run ForceBalance with evaluator

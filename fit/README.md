@@ -22,3 +22,7 @@ curl https://raw.githubusercontent.com/openforcefield/openff-sage/main/inputs-an
 
 ## Setting up options
 
+
+## Evaluator config
+
+Evaluator uses dask to 

@@ -15,7 +15,7 @@ dependencies:
   - aws-c-compression=0.2.19=haa50ccc_0
   - aws-c-event-stream=0.4.3=h570d160_0
   - aws-c-http=0.8.8=h9b61739_1
-  - aws-c-io=0.14.18=h49c7fd3_7
+  - aws-c-io=0.14.18=hc9e8850_8
   - aws-c-mqtt=0.10.4=h5c8269d_18
   - aws-c-s3=0.6.5=h9204347_0
   - aws-c-sdkutils=0.1.19=h038f3f9_2
@@ -91,7 +91,7 @@ dependencies:
   - gmso=0.11.2=pyhd8ed1ab_0
   - greenlet=3.0.3=py311hb755f60_0
   - griddataformats=1.0.2=pyhd8ed1ab_0
-  - gsd=3.3.1=py311h9f3472d_1
+  - gsd=3.3.2=py311h9f3472d_0
   - h2=4.1.0=pyhd8ed1ab_0
   - h5py=3.11.0=nompi_py311h439e445_102
   - hdf4=4.2.15=h2a13503_7
@@ -106,8 +106,6 @@ dependencies:
   - iniconfig=2.0.0=pyhd8ed1ab_0
   - ipykernel=6.29.5=pyh3099207_0
   - ipython=8.27.0=pyh707e725_0
-  - jax=0.4.31=pyhd8ed1ab_1
-  - jaxlib=0.4.31=cpu_py311h50a2e4b_1
   - jedi=0.19.1=pyhd8ed1ab_0
   - jinja2=3.1.4=pyhd8ed1ab_0
   - joblib=1.4.2=pyhd8ed1ab_0
@@ -195,10 +193,9 @@ dependencies:
   - mdanalysis=2.7.0=py311h320fe9a_1
   - mdtraj=1.10.0=py311h3f233a9_0
   - mdurl=0.1.2=pyhd8ed1ab_0
-  - ml_dtypes=0.4.0=py311h7db5c69_2
   - mmtf-python=1.1.3=pyhd8ed1ab_0
-  - mpc=1.3.1=h24ddda3_0
-  - mpfr=4.2.1=h38ae2d0_2
+  - mpc=1.3.1=h24ddda3_1
+  - mpfr=4.2.1=h90cbb55_3
   - mpiplus=v0.0.2=pyhd8ed1ab_0
   - mpmath=1.3.0=pyhd8ed1ab_0
   - mrcfile=1.5.3=pyhd8ed1ab_0
@@ -230,8 +227,6 @@ dependencies:
   - openmm=8.1.2=py311he040c58_2
   - openmmtools=0.23.1=pyhd8ed1ab_0
   - openssl=3.3.2=hb9d3cd8_0
-  - opt-einsum=3.3.0=hd8ed1ab_2
-  - opt_einsum=3.3.0=pyhc1e730c_2
   - orc=2.0.2=h669347b_0
   - packaging=24.1=pyhd8ed1ab_0
   - packmol=20.15.1=hc8b2c43_1
@@ -248,10 +243,10 @@ dependencies:
   - pint=0.23=pyhd8ed1ab_1
   - pip=24.2=pyh8b19718_1
   - pixman=0.43.2=h59595ed_0
-  - platformdirs=4.2.2=pyhd8ed1ab_0
+  - platformdirs=4.3.2=pyhd8ed1ab_0
   - pluggy=1.5.0=pyhd8ed1ab_0
   - prompt-toolkit=3.0.47=pyha770c72_0
-  - psutil=6.0.0=py311h331c9d8_0
+  - psutil=6.0.0=py311h9ecbd09_1
   - pthread-stubs=0.4=h36c2ea0_1001
   - ptyprocess=0.7.0=pyhd3deb0d_0
   - pure_eval=0.2.3=pyhd8ed1ab_0
@@ -268,7 +263,6 @@ dependencies:
   - pygments=2.18.0=pyhd8ed1ab_0
   - pyjwt=2.9.0=pyhd8ed1ab_1
   - pymbar=3.1.1=py311h7c22f60_3
-  - pymbar-core=4.0.3=py311h1f0f07a_1
   - pyparsing=3.1.4=pyhd8ed1ab_0
   - pysocks=1.7.1=pyha2e5f31_6
   - pytables=3.10.1=py311h17fbfd3_1
@@ -292,7 +286,7 @@ dependencies:
   - requests=2.32.3=pyhd8ed1ab_0
   - rich=13.7.1=pyhd8ed1ab_0
   - rlpycairo=0.2.0=pyhd8ed1ab_0
-  - s2n=1.5.1=h3400bea_0
+  - s2n=1.5.2=h7b32b05_0
   - scikit-learn=1.5.1=py311hd632256_0
   - scipy=1.14.1=py311he1f765f_0
   - seaborn=0.13.2=hd8ed1ab_2
@@ -352,4 +346,4 @@ dependencies:
   - pip:
       - click-option-group==0.5.6
       - yammbs==0+untagged.198.g0a94095
-prefix: /data/homezvol3/lilyw7/miniforge3/envs/sage-2.1.0-opc3
+prefix: /data1/choderaj/wangl14/miniforge3/envs/sage-2.1.0-opc3

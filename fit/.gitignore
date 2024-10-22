@@ -1,0 +1,12 @@
+targets
+optimize.tmp
+optimize.sav
+optimize.bak
+
+working-directory
+dask-worker-space
+stored_data
+smirnoff_parameter_assignments.json
+worker-logs
+
+*.out
